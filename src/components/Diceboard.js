@@ -6,7 +6,7 @@ const DiceBoard = (props) => {
     //console.log(props.boardArr.length);
     const boardId = "board"+props.player;
     const columns = props.boardArr.map((col, index) =>{
-       return <Column key={index} columnArr={col} isMyTurn={props.isMyTurn} handleTakeTurn={props.handleTakeTurn} />
+       return <Column key={index} colIndex={index} columnArr={col} isMyTurn={props.isMyTurn} handleTakeTurn={props.handleTakeTurn} />
     })
 	return (
 			<div className="diceBoard" id={boardId}>

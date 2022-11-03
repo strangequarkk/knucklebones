@@ -29,3 +29,11 @@ code {
 .side1 {
   margin-bottom:2em;
 }
+
+.column {
+  display:flex;
+  flex-direction:column;
+}
+#board1 .column {
+  flex-direction: column-reverse;
+}
