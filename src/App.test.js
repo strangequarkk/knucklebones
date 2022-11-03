@@ -45,5 +45,5 @@ test('renders learn react link', () => {
 //    - 1 clickable die, (click handler picks random # and uses setCurrentDie)
 //    - 1 player score 
 //  - 2 Diceboards (props: boardArr, isMyTurn, handleTakeTurn)
-//    - 3 Columns (props: columnArr, handleTakeTurn)
-//    - 3 Cells (props: cellVal)
+//    - 3 Columns (props: columnArr, isMyTurn, handleTakeTurn)
+//      - 3 Cells (props: cellVal)
