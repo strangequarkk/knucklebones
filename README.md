@@ -9,9 +9,9 @@ A student came to me with a game project, recreating the "knucklebones" mini gam
 (lifted from [Game Pressure Game Guides](https://github.com/facebook/create-react-app))
 Each player has 3 columns at their disposal, in each column they can place a maximum of 3 dice. The players alternately roll 1 dice and choose the column and place where they want to place it.
 
-    - A dice's point value is equal to the number appearing on it .
-    - Arranging several dice with the same value in a given column will trigger combos . If there are 2 identical dice in the column, the sum of the dice is multiplied by 2. 3 identical dice results in a x9 multiplier.
-    - If a dice with the same number as in the opponent's column is placed in the opposite column, the opponent loses all dice of that value .
+* A dice's point value is equal to the number appearing on it .
+* Arranging several dice with the same value in a given column will trigger combos . If there are 2 identical dice in the column, the sum of the dice is multiplied by 2. 3 identical dice results in a x9 multiplier.
+* If a dice with the same number as in the opponent's column is placed in the opposite column, the opponent loses all dice of that value .
 
 Creating combos and eliminating the opponent's dice, especially the high-scoring ones, is the key to victory. Sometimes it's worth giving up creating your own combo to get rid of the enemy's points.
 
