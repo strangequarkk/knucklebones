@@ -1,30 +1,31 @@
-import React, { useState } from "react";
+const Player = ({
+  icon,
+  player,
+  playerScore,
+  currentDie,
+  isMyTurn,
+  setCurrentDie,
+}) => {
+  const playerId = "player" + player;
 
-const Player = (props) => {
-    //(props: icon(player color), player, playerScore, currentDie, isMyTurn, setCurrentDie)
+  const handleDiceClick = () => {
+    if (isMyTurn) {
+      const newRoll = Math.floor(Math.random() * 6) + 1;
+      setCurrentDie(newRoll);
+    }
+  };
 
-	const playerId = "player"+props.player
-
-    const handleDiceClick = () => {
-        if(props.isMyTurn) {
-            const newRoll = Math.floor(Math.random() * 6) + 1;
-            props.setCurrentDie(newRoll);
-        }
-       
-
-      }
-
-	return (
-			<div id={playerId}>
-                Player {props.player}
-                <div className ="playericon" style={{background: props.icon}}></div>
-                <div className ="dice" >
-                    {props.isMyTurn && <button onClick={handleDiceClick}> Roll Dice</button>}
-                    {props.isMyTurn ? props.currentDie : ""}
-                    </div>
-                <div className ="score">{props.playerScore}</div>
-            </div>
-	);
+  return (
+    <div id={playerId}>
+      Player {player}
+      <div className="playericon" style={{ background: icon }}></div>
+      <div className="dice">
+        {isMyTurn && <button onClick={handleDiceClick}> Roll Dice</button>}
+        {isMyTurn ? currentDie : ""}
+      </div>
+      <div className="score">{playerScore}</div>
+    </div>
+  );
 };
 
 export default Player;

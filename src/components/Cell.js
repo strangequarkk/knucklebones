@@ -1,14 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-
-const Column = (props) => {
-    //(props: cellVal)
-
-	return (
-			<div className="cell">
-                {props.cellVal}
-            </div>
-	);
+const Column = ({ cellVal }) => {
+  return <div className="cell">{cellVal}</div>;
 };
 
 export default Column;
